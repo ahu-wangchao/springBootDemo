@@ -29,6 +29,7 @@ public class ComputerUserController extends BaseController {
     @ResponseBody
     @RequestMapping(value = "/selectAll",method = RequestMethod.POST)
     public Result selectAll() {
+        logger.info("1");
         List<ComputerUser> list = computerUserService.selectList();
         logger.info("2");
         return Result.success(list);
