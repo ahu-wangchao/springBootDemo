@@ -31,6 +31,7 @@ public class ComputerUserController extends BaseController {
     public Result selectAll() {
         logger.info("2");
         List<ComputerUser> list = computerUserService.selectList();
+        logger.info("211");
         return Result.success(list);
     }
 
