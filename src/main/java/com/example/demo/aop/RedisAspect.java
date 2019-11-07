@@ -34,6 +34,7 @@ public class RedisAspect {
 
     @Around("getComputerUserCache()")
     public Object aroundGetComputerUserCache(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("进入redis缓存切面");
         //数据以json形式存储
         ValueOperations<String, String> operations = redisTemplate.opsForValue();
         //获取目标类名，方法名、参数
