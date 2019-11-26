@@ -40,6 +40,7 @@ public class ComputerUserController extends BaseController {
     public Result add(ComputerUser computerUser){
         setCreateInfo(computerUser);
         computerUserService.add(computerUser);
+        logger.info("git版本更新测试代码");
         return Result.success("操作成功！");
     }
 
